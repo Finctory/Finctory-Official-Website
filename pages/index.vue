@@ -52,7 +52,7 @@
         target="_blank"
         class="flex w-full items-center justify-center rounded-lg bg-green-400 p-4 text-center text-xl text-white shadow-lg transition hover:bg-green-500"
       >
-        <img src="/thumbnail.svg" alt="發票醫生" class="mr-2 h-6 w-6" />
+        <img src="/thumbnail.png" alt="發票醫生" class="mr-2 h-6 w-6" />
         發票醫生
       </a>
     </div>

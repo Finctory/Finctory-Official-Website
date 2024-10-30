@@ -38,7 +38,7 @@ useHead({
   link: [
     {
       rel: 'icon',
-      href: '/thumbnail.svg',
+      href: '/thumbnail.png',
     },
   ],
   htmlAttrs: {
