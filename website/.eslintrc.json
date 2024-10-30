@@ -1,0 +1,7 @@
+{
+  "extends": ["@nuxt", "plugin:prettier/recommended", "prettier"],
+  "rules": {
+    "no-undef": "off",
+    "prettier/prettier": ["error"]
+  }
+}
