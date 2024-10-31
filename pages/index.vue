@@ -1,10 +1,10 @@
 <template>
   <div
-    class="flex min-h-screen flex-col items-center justify-between bg-gradient-to-r from-green-100 to-white p-8"
+    class="flex min-h-screen flex-col items-center justify-between bg-gradient-to-r from-green-100 to-white p-4 sm:p-8"
   >
-    <div class="mb-8 mt-16 w-full max-w-4xl rounded-lg bg-white bg-opacity-95 p-8 shadow-lg">
+    <div class="mb-8 mt-16 w-full max-w-4xl rounded-lg bg-white bg-opacity-95 p-4 shadow-lg sm:p-8">
       <h1
-        class="break-words text-left text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl lg:text-7xl"
+        class="break-words text-left text-3xl font-bold text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl"
       >
         <span
           v-for="(char, index) in title"
@@ -17,7 +17,7 @@
         </span>
       </h1>
       <p
-        class="mt-4 break-words text-left text-xl text-gray-700 sm:text-2xl md:text-3xl lg:text-4xl"
+        class="mt-4 break-words text-left text-lg text-gray-700 sm:text-xl md:text-2xl lg:text-3xl"
       >
         <span
           v-for="(char, index) in description"
@@ -92,8 +92,8 @@
 <script setup>
 import { ref } from 'vue'
 
-const title = ref('Fintory 斐闊')
-const description = ref('利用人工智慧技術，協助個人達成金錢控管的目標')
+const title = ref('斐闊．Finctory')
+const description = ref('「財務韌性，科技共行」')
 </script>
 
 <style scoped>
