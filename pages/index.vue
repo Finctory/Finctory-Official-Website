@@ -40,9 +40,17 @@
         Facebook
       </a>
       <a
-        href="mailto:finctory@gmail.com"
+        href="https://www.youtube.com/@Finctory"
         target="_blank"
         class="flex w-full items-center justify-center rounded-lg bg-red-600 p-4 text-center text-xl text-white shadow-lg transition hover:bg-red-700"
+      >
+        <img src="/youtube.png" alt="Youtube" class="mr-2 h-6 w-6" />
+        Youtube
+      </a>
+      <a
+        href="mailto:finctory@gmail.com"
+        target="_blank"
+        class="flex w-full items-center justify-center rounded-lg bg-orange-400 p-4 text-center text-xl text-white shadow-lg transition hover:bg-orange-600"
       >
         <img src="/email.png" alt="Email" class="mr-2 h-6 w-6" />
         Email
