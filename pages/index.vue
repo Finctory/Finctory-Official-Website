@@ -151,27 +151,39 @@ useSeoMeta({
 })
 
 // 添加結構化數據
-useSchemaOrg([
-  defineOrganization({
-    name: '斐闊．Finctory',
-    description: '專業的金融科技解決方案提供商',
-    url: 'https://finctory.com',
-    logo: 'https://finctory.com/finctory_LOGO.svg',
-    sameAs: [
-      'https://www.facebook.com/finctory',
-      'https://www.youtube.com/@Finctory'
-    ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      email: 'finctory@gmail.com',
-      contactType: 'customer service'
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: '斐闊．Finctory',
+        description: '專業的金融科技解決方案提供商',
+        url: 'https://finctory.com',
+        logo: 'https://finctory.com/finctory_LOGO.svg',
+        sameAs: [
+          'https://www.facebook.com/finctory',
+          'https://www.youtube.com/@Finctory'
+        ],
+        contactPoint: {
+          '@type': 'ContactPoint',
+          email: 'finctory@gmail.com',
+          contactType: 'customer service'
+        }
+      })
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: '斐闊．Finctory',
+        url: 'https://finctory.com'
+      })
     }
-  }),
-  defineWebSite({
-    name: '斐闊．Finctory',
-    url: 'https://finctory.com'
-  })
-])
+  ]
+})
 
 useServerSeoMeta({
   robots: 'index, follow',

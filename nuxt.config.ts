@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
-    '@nuxtjs/seo'
+    '@nuxtjs/robots'  // 使用官方的robots模組
   ],
   site: {
     url: 'https://finctory.com',
@@ -13,9 +13,16 @@ export default defineNuxtConfig({
     defaultLocale: 'zh-TW'
   },
   robots: {
-    enabled: true,
-    sitemap: true,
-    indexable: true,
+    UserAgent: '*',
+    Allow: '/',
+    Sitemap: 'https://finctory.com/sitemap.xml'
+  },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/'],
+      ignore: ['/robots.txt']  // 忽略robots.txt的預渲染
+    }
   },
   ogImage: {
     enabled: true,
@@ -23,7 +30,7 @@ export default defineNuxtConfig({
   linkChecker: {
     enabled: true,
   },
-  ssr: true, // 啟用服務器端渲染以提升SEO
+  ssr: true,
   experimental: {
     viewTransition: true,
     renderJsonPayloads: true,
