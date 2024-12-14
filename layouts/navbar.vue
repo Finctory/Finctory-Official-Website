@@ -4,7 +4,7 @@
       <div class="flex items-center">
         <div class="relative h-12 w-32 md:h-14 md:w-40 lg:h-16 lg:w-48">
           <NuxtImg
-            src="/finctory_LOGO.svg"
+            src="/finctory_LOGO.png"
             alt="Finctory - 斐闊"
             class="absolute inset-0 h-full w-full"
             format="png"
