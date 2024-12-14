@@ -41,7 +41,20 @@
         >
           <div class="flex w-full">
             <div class="ml-4 flex items-center sm:ml-8 md:ml-12">
-              <img :src="link.icon" :alt="link.name" class="mr-3 h-6 w-6 animate-bounce" />
+              <NuxtImg 
+                :src="link.icon" 
+                alt=""
+                aria-hidden="true"
+                class="mr-3 animate-bounce"
+                format="webp"
+                quality="80"
+                :width="link.name === '發票醫生' ? 18 : 24"
+                :height="link.name === '發票醫生' ? 24 : 24"
+                fit="cover"
+                placeholder
+                loading="lazy"
+                style="object-fit: contain; background: transparent;"
+              />
               <span>{{ link.name }}</span>
             </div>
           </div>
@@ -58,10 +71,12 @@
             :key="i"
             class="award-container relative m-2 transform transition-all duration-300 hover:scale-110"
           >
-            <img
+            <NuxtImg
               :src="`/award_${i}.png`"
               :alt="`Award ${i}`"
               class="h-32 w-32 object-contain sm:h-40 sm:w-40 md:h-48 md:w-48 lg:h-56 lg:w-56"
+              format="webp"
+              quality="80"
             />
           </div>
         </div>
@@ -99,13 +114,13 @@ const socialLinks = [
     name: 'Email',
     url: 'mailto:finctory@gmail.com',
     icon: '/email.png',
-    bgClass: 'bg-orange-400 hover:bg-orange-600',
+    bgClass: 'bg-orange-600 hover:bg-orange-700',  
   },
   {
     name: '發票醫生',
     url: 'https://invoice-doctor-dev.finctory.com',
     icon: '/thumbnail.png',
-    bgClass: 'bg-green-400 hover:bg-green-500',
+    bgClass: 'bg-green-600 hover:bg-green-700',  
   },
 ]
 
@@ -116,6 +131,56 @@ let cursorTrail = []
 const TRAIL_LENGTH = 20
 const METEOR_COUNT = 50
 const OPENING_DURATION = 1000
+
+useSeoMeta({
+  title: '斐闊．Finctory - 專業的金融科技解決方案提供商',
+  description: '斐闊科技為您提供創新的金融科技解決方案，包括發票醫生等專業服務。我們致力於透過科技提升企業財務韌性，實現數位轉型。',
+  keywords: '斐闊,Finctory,金融科技,發票醫生,財務管理,數位轉型,企業解決方案',
+  
+  // Open Graph / Facebook
+  ogTitle: '斐闊．Finctory - 專業的金融科技解決方案提供商',
+  ogDescription: '斐闊科技為您提供創新的金融科技解決方案，包括發票醫生等專業服務。我們致力於透過科技提升企業財務韌性，實現數位轉型。',
+  ogImage: 'https://finctory.com/og-image.jpg',
+  ogType: 'website',
+  
+  // Twitter
+  twitterCard: 'summary_large_image',
+  twitterTitle: '斐闊．Finctory - 專業的金融科技解決方案提供商',
+  twitterDescription: '斐闊科技為您提供創新的金融科技解決方案，包括發票醫生等專業服務。',
+  twitterImage: 'https://finctory.com/og-image.jpg',
+})
+
+// 添加結構化數據
+useSchemaOrg([
+  defineOrganization({
+    name: '斐闊．Finctory',
+    description: '專業的金融科技解決方案提供商',
+    url: 'https://finctory.com',
+    logo: 'https://finctory.com/finctory_LOGO.svg',
+    sameAs: [
+      'https://www.facebook.com/finctory',
+      'https://www.youtube.com/@Finctory'
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'finctory@gmail.com',
+      contactType: 'customer service'
+    }
+  }),
+  defineWebSite({
+    name: '斐闊．Finctory',
+    url: 'https://finctory.com'
+  })
+])
+
+useServerSeoMeta({
+  robots: 'index, follow',
+  viewport: 'width=device-width, initial-scale=1',
+  formatDetection: { telephone: 'no' },
+  themeColor: '#ffffff',
+  charset: 'utf-8',
+  'format-detection': 'telephone=no'
+})
 
 onMounted(() => {
   try {

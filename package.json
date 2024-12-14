@@ -10,7 +10,11 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/image": "^1.8.1",
+    "@nuxtjs/seo": "^2.0.2",
+    "@unhead/vue": "^1.11.14",
     "@vueuse/core": "^12.0.0",
+    "@vueuse/head": "^2.0.0",
     "nuxt": "^3.13.2",
     "three": "^0.171.0",
     "vue": "latest",
