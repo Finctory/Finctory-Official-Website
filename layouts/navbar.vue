@@ -7,10 +7,12 @@
             src="/finctory_LOGO.svg"
             alt="Finctory - 斐闊"
             class="absolute inset-0 h-full w-full"
-            format="webp"
+            format="png"
             loading="eager"
             preload
-            style="object-fit: contain; background: transparent;"
+            style="object-fit: contain; background: transparent"
+            provider="ipx"
+            quality="100"
           />
         </div>
       </div>

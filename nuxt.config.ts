@@ -39,8 +39,13 @@ export default defineNuxtConfig({
   css: ['./assets/main.css'],
   buildAssetsDir: '/static/',
   image: {
-    format: ['webp', 'avif'],
+    format: ['webp', 'png'],
     provider: 'ipx',
+    ipx: {
+      optimizers: {
+        svg: false // 禁用SVG優化
+      }
+    },
     screens: {
       'xs': 320,
       'sm': 640,
@@ -49,5 +54,7 @@ export default defineNuxtConfig({
       'xl': 1280,
       '2xl': 1536,
     },
+    domains: ['finctory.com'],
+    quality: 80
   }
 })
