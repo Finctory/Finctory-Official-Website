@@ -192,10 +192,10 @@ useServerSeoMeta({
 
 onMounted(() => {
   try {
-    initThree()
-    initCursorTrail()
-    createMeteors()
-    animate()
+    // initThree()
+    // initCursorTrail()
+    // createMeteors()
+    // animate()
   } catch (error) {
     console.error('Error during setup:', error)
   }
