@@ -240,6 +240,7 @@ useHead({
           '@type': 'Offer',
           name: '發票醫生',
           description: 'AI 驅動的智能發票管理與理財教練系統',
+          url: 'https://invoice-doctor-dev.finctory.com',
         },
       }),
     },

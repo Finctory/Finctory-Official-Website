@@ -20,41 +20,16 @@ export default defineNuxtConfig({
     defaults: {
       changefreq: 'daily',
       priority: 0.8,
-      lastmod: new Date(),
+      lastmod: new Date().toISOString(),
     },
     urls: [
       {
-        loc: '/', // 修正屬性名稱
+        loc: '/',
         changefreq: 'daily',
         priority: 1,
-        lastmod: new Date(),
-        img: [
-          {
-            url: 'https://www.finctory.com/finctory_LOGO.svg',
-            caption: '斐闊．Finctory Logo',
-          },
-        ],
-      },
-      {
-        loc: '/invoice-doctor',
-        changefreq: 'weekly',
-        priority: 0.9,
-        lastmod: new Date(),
-        img: [
-          {
-            url: 'https://www.finctory.com/thumbnail.png',
-            caption: '發票醫生 - AI智能記帳系統',
-          },
-        ],
+        lastmod: new Date().toISOString(),
       },
     ],
-    sitemaps: {
-      enabled: true,
-      path: '/sitemaps/',
-    },
-    xslUrl: '/sitemap.xsl',
-    xmlNs:
-      'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"',
   },
   i18n: {
     locales: ['zh-TW'],
@@ -76,11 +51,11 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/invoice-doctor'], // 添加所有重要路徑
+      routes: ['/'],
       ignore: ['/robots.txt'],
     },
-    compressPublicAssets: true, // 啟用資源壓縮
-    minify: true, // 啟用程式碼壓縮
+    compressPublicAssets: true,
+    minify: true,
   },
   ogImage: {
     enabled: true,
