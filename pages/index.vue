@@ -130,23 +130,24 @@ const TRAIL_LENGTH = 20
 const METEOR_COUNT = 50
 
 useSeoMeta({
-  title: '斐闊．Finctory - 專業的金融科技解決方案提供商',
+  title: '斐闊．Finctory - AI 驅動的智能財務解決方案',
   description:
-    '斐闊科技為您提供創新的金融科技解決方案，包括發票醫生等專業服務。我們致力於透過科技提升企業財務韌性，實現數位轉型。',
-  keywords: '斐闊,Finctory,金融科技,發票醫生,財務管理,數位轉型,企業解決方案',
+    '斐闊．Finctory 運用 AI 與大語言模型（LLM）技術，提供智慧理財與數據分析解決方案，幫助企業與個人提升財務管理效率。核心產品如「發票醫生」專注於自動記帳、儲蓄建議與財務健康分析，助力數位轉型。',
+  keywords:
+    'Finctory, 斐闊, 金融科技, AI財務顧問, 發票醫生, 數位理財, AI記帳, 企業財務管理, 財務健康',
 
   // Open Graph / Facebook
-  ogTitle: '斐闊．Finctory - 專業的金融科技解決方案提供商',
+  ogTitle: '斐闊．Finctory - AI 驅動的智能財務解決方案',
   ogDescription:
-    '斐闊科技為您提供創新的金融科技解決方案，包括發票醫生等專業服務。我們致力於透過科技提升企業財務韌性，實現數位轉型。',
-  ogImage: 'https://finctory.com/og-image.jpg',
+    'Finctory 斐闊科技運用 AI 與大語言模型（LLM）技術，提供智慧理財與數據分析解決方案，幫助企業與個人提升財務管理效率。核心產品如「發票醫生」專注於自動記帳、儲蓄建議與財務健康分析，助力數位轉型。',
+  ogImage: 'https://www.finctory.com/og-image.jpg',
   ogType: 'website',
 
   // Twitter
   twitterCard: 'summary_large_image',
-  twitterTitle: '斐闊．Finctory - 專業的金融科技解決方案提供商',
-  twitterDescription: '斐闊科技為您提供創新的金融科技解決方案，包括發票醫生等專業服務。',
-  twitterImage: 'https://finctory.com/og-image.jpg',
+  twitterTitle: '斐闊．Finctory - AI 驅動的智能財務解決方案',
+  twitterDescription: '運用 AI 理財科技，為企業與個人打造智能財務管理新標準。',
+  twitterImage: 'https://www.finctory.com/og-image.jpg',
 })
 
 // 添加結構化數據
@@ -159,8 +160,8 @@ useHead({
         '@type': 'Organization',
         name: '斐闊．Finctory',
         description: '專業的金融科技解決方案提供商',
-        url: 'https://finctory.com',
-        logo: 'https://finctory.com/finctory_LOGO.svg',
+        url: 'https://www.finctory.com',
+        logo: 'https://www.finctory.com/finctory_LOGO.svg',
         sameAs: ['https://www.facebook.com/finctory', 'https://www.youtube.com/@Finctory'],
         contactPoint: {
           '@type': 'ContactPoint',
@@ -175,7 +176,7 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         name: '斐闊．Finctory',
-        url: 'https://finctory.com',
+        url: 'https://www.finctory.com',
       }),
     },
   ],
