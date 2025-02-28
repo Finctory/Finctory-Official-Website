@@ -42,7 +42,7 @@
             <div class="ml-4 flex items-center sm:ml-8 md:ml-12">
               <NuxtImg
                 :src="link.icon"
-                alt=""
+                :alt="`${link.name} - 斐闊科技官方${link.name === 'Email' ? '聯絡信箱' : link.name === '發票醫生' ? '智能記帳系統' : '社群媒體'}`"
                 aria-hidden="true"
                 class="mr-3 animate-bounce"
                 format="webp"
@@ -72,7 +72,7 @@
           >
             <NuxtImg
               :src="`/award_${i}.png`"
-              :alt="`Award ${i}`"
+              :alt="getAwardAlt(i)"
               class="h-32 w-32 object-contain sm:h-40 sm:w-40 md:h-48 md:w-48 lg:h-56 lg:w-56"
               format="webp"
               quality="80"
@@ -130,24 +130,43 @@ const TRAIL_LENGTH = 20
 const METEOR_COUNT = 50
 
 useSeoMeta({
-  title: '斐闊．Finctory - AI 驅動的智能財務解決方案',
+  title: '斐闊．Finctory - AI智能財務管理與發票醫生 | 企業數位轉型專家',
   description:
-    '斐闊．Finctory 運用 AI 與大語言模型（LLM）技術，提供智慧理財與數據分析解決方案，幫助企業與個人提升財務管理效率。核心產品如「發票醫生」專注於自動記帳、儲蓄建議與財務健康分析，助力數位轉型。',
+    '斐闊．Finctory 專注於企業智能財務管理，運用 AI 與大語言模型（LLM）技術，開發智慧理財與自動化數據分析解決方案。我們的核心產品「發票醫生」提供自動記帳、智能理財建議與財務健康分析，協助企業實現數位轉型，提升營運效率。榮獲 2024 臺灣數創大賞金獎等多項殊榮。',
   keywords:
-    'Finctory, 斐闊, 金融科技, AI財務顧問, 發票醫生, 數位理財, AI記帳, 企業財務管理, 財務健康',
+    'Finctory, 斐闊, 金融科技, AI財務顧問, 發票醫生, 數位理財, AI記帳, 企業財務管理, 財務健康, 智能記帳, 財務分析, 理財規劃, 電子發票, 自動記帳系統, 企業數位轉型, 智能財務管理, AI理財, 財務自動化, 發票管理系統, 智能記帳系統',
 
   // Open Graph / Facebook
-  ogTitle: '斐闊．Finctory - AI 驅動的智能財務解決方案',
+  ogTitle: '斐闊．Finctory - AI智能財務管理與發票醫生 | 企業數位轉型專家',
   ogDescription:
-    'Finctory 斐闊科技運用 AI 與大語言模型（LLM）技術，提供智慧理財與數據分析解決方案，幫助企業與個人提升財務管理效率。核心產品如「發票醫生」專注於自動記帳、儲蓄建議與財務健康分析，助力數位轉型。',
+    '斐闊．Finctory 專注於企業智能財務管理，運用 AI 與 LLM 技術，開發智慧理財與自動化數據分析解決方案。榮獲 2024 臺灣數創大賞金獎等多項殊榮，致力於協助企業實現數位轉型。',
   ogImage: 'https://www.finctory.com/og-image.jpg',
   ogType: 'website',
+  ogLocale: 'zh_TW',
+  ogSiteName: '斐闊．Finctory',
 
   // Twitter
   twitterCard: 'summary_large_image',
-  twitterTitle: '斐闊．Finctory - AI 驅動的智能財務解決方案',
-  twitterDescription: '運用 AI 理財科技，為企業與個人打造智能財務管理新標準。',
+  twitterTitle: '斐闊．Finctory - AI智能財務管理與發票醫生 | 企業數位轉型專家',
+  twitterDescription:
+    '運用 AI 理財科技，為企業打造智能財務管理新標準。榮獲 2024 臺灣數創大賞金獎。',
   twitterImage: 'https://www.finctory.com/og-image.jpg',
+
+  // 其他重要 meta 標籤
+  author: '斐闊．Finctory',
+  publisher: '斐闊．Finctory',
+  language: 'zh-TW',
+  revisitAfter: '7 days',
+
+  // 添加更多相關的 meta 標籤
+  'application-name': '斐闊．Finctory',
+  'msapplication-TileColor': '#ffffff',
+  'theme-color': '#ffffff',
+
+  // 添加結構化數據相關的 meta 標籤
+  'og:price:amount': '0',
+  'og:price:currency': 'TWD',
+  'og:availability': 'in stock',
 })
 
 // 添加結構化數據
@@ -167,6 +186,60 @@ useHead({
           '@type': 'ContactPoint',
           email: 'finctory@gmail.com',
           contactType: 'customer service',
+          availableLanguage: ['Chinese'],
+        },
+        founder: {
+          '@type': 'Person',
+          name: '斐闊．Finctory 創辦人 - 杜德皓',
+        },
+        award: [
+          {
+            '@type': 'Award',
+            name: '社會企業創業提案競賽 - 優選',
+            description: '2025 第七屆社會企業創業提案競賽優選獎',
+            datePublished: '2025',
+          },
+          {
+            '@type': 'Award',
+            name: '臺北市智慧城市青年舉政徵件提案競賽 - 佳作',
+            description: '2024 臺北市智慧城市青年舉政徵件提案競賽佳作',
+            datePublished: '2024',
+          },
+          {
+            '@type': 'Award',
+            name: '臺灣數創大賞 - 金獎',
+            description: '2024 臺灣數創大賞金獎',
+            datePublished: '2024',
+          },
+          {
+            '@type': 'Award',
+            name: 'Startup 創業競技場競賽 - 第一名',
+            description: '2024 第六屆 Startup 創業競技場競賽冠軍',
+            datePublished: '2024',
+          },
+          {
+            '@type': 'Award',
+            name: '桃園青創力學生創業競賽 - 佳作',
+            description: '2024 桃園青創力學生創業競賽佳作',
+            datePublished: '2024',
+          },
+          {
+            '@type': 'Award',
+            name: '致青春‧創未來全國選拔大賽 - 優等獎',
+            description: '2024 第 7 屆致青春‧創未來全國選拔大賽優等獎',
+            datePublished: '2024',
+          },
+          {
+            '@type': 'Award',
+            name: '中央新創擂台賽 - 優選',
+            description: '2023 中央新創擂台賽優選',
+            datePublished: '2023',
+          },
+        ],
+        offers: {
+          '@type': 'Offer',
+          name: '發票醫生',
+          description: 'AI 驅動的智能發票管理與理財教練系統',
         },
       }),
     },
@@ -177,6 +250,22 @@ useHead({
         '@type': 'WebSite',
         name: '斐闊．Finctory',
         url: 'https://www.finctory.com',
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: 'https://www.finctory.com/search?q={search_term_string}',
+          'query-input': 'required name=search_term_string',
+        },
+      }),
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        name: '發票醫生',
+        applicationCategory: 'FinanceApplication',
+        operatingSystem: 'Web',
+        description: 'AI 驅動的智能發票管理與記帳系統，協助企業與個人實現自動化財務管理。',
       }),
     },
   ],
@@ -345,6 +434,17 @@ function animate() {
   })
 
   renderer.render(scene, camera)
+}
+
+const getAwardAlt = (index) => {
+  const awards = {
+    1: '2025 第七屆社會企業創業提案競賽 - 優選 - 斐闊．Finctory',
+    2: '2024 臺灣數創大賞 - 金獎 - 斐闊．Finctory',
+    3: '2024 第六屆 Startup 創業競技場競賽 - 第一名 - 斐闊．Finctory',
+    4: '2024 臺北市智慧城市青年舉政徵件提案競賽 - 佳作 - 斐闊．Finctory',
+    5: '2024 第 7 屆致青春‧創未來全國選拔大賽 - 優等獎 - 斐闊．Finctory',
+  }
+  return awards[index] || `獎項 ${index} - 斐闊．Finctory`
 }
 </script>
 
