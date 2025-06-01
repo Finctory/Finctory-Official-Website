@@ -100,25 +100,25 @@ const socialLinks = [
     name: 'Facebook',
     url: 'https://www.facebook.com/finctory',
     icon: '/facebook.png',
-    bgClass: 'bg-blue-600 hover:bg-blue-700',
+    bgClass: 'bg-[#0A4572] hover:bg-[#3980B5]',
   },
   {
     name: 'Youtube',
     url: 'https://www.youtube.com/@Finctory',
     icon: '/youtube.png',
-    bgClass: 'bg-red-600 hover:bg-red-700',
+    bgClass: 'bg-[#0A4572] hover:bg-[#3980B5]',
   },
   {
     name: 'Email',
     url: 'mailto:finctory@gmail.com',
     icon: '/email.png',
-    bgClass: 'bg-orange-600 hover:bg-orange-700',
+    bgClass: 'bg-[#0A4572] hover:bg-[#3980B5]',
   },
   {
     name: '發票醫生',
     url: 'https://invoice-doctor-dev.finctory.com',
     icon: '/thumbnail.png',
-    bgClass: 'bg-green-600 hover:bg-green-700',
+    bgClass: 'bg-[#0A4572] hover:bg-[#3980B5]',
   },
 ]
 
