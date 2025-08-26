@@ -33,7 +33,7 @@
         <p>
           若你在 Facebook 設定中對本 App 取消授權，Facebook 可能傳送刪除請求至我們的伺服器回呼端點；
           我們將依請求刪除相關資料。若需更多資訊，請參考
-          <router-link to="/privacy.html">隱私權政策</router-link>。
+          <router-link to="/osave/privacy.html">隱私權政策</router-link>。
         </p>
       </section>
 
