@@ -56,7 +56,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 
-const PRIVACY_EMAIL = 'finctory@gmail.com'
+const PRIVACY_EMAIL = 'osave@finctory.com'
 
 onMounted(() => {
   document.title = '用戶資料刪除｜財伴 oSave'
