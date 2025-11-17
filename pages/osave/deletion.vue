@@ -3,7 +3,6 @@
     <main class="doc">
       <header>
         <h1>用戶資料刪除指示</h1>
-        <p class="meta">適用於以 Facebook 登入之使用者</p>
       </header>
 
       <section>
@@ -22,17 +21,18 @@
           >， 信件主旨請寫「資料刪除申請」，並附上：
         </p>
         <ul>
-          <li>你的登入 Email（或 Facebook UID）。</li>
+          <li>你的登入 Email（或第三方登入帳號識別碼）。</li>
           <li>同意刪除之確認聲明。</li>
         </ul>
         <p>我們將於合理期間內（通常 7–30 日內）完成刪除，法令要求需保留之資料除外。</p>
       </section>
 
       <section>
-        <h2>Facebook 取消授權（Deauthorization）</h2>
+        <h2>第三方登入取消授權</h2>
         <p>
-          若你在 Facebook 設定中對本 App 取消授權，Facebook 可能傳送刪除請求至我們的伺服器回呼端點；
-          我們將依請求刪除相關資料。若需更多資訊，請參考
+          若你使用第三方登入服務（如 Facebook、Google 等），並在該服務的設定中對本 App 取消授權，
+          該服務可能傳送刪除請求至我們的伺服器回呼端點；我們將依請求刪除相關資料。
+          若需更多資訊，請參考
           <router-link to="/osave/privacy">隱私權政策</router-link>。
         </p>
       </section>
@@ -47,7 +47,7 @@
       </section>
 
       <footer class="note">
-        <p>（此頁面提供 Facebook 審查所需之資料刪除指示 URL。）</p>
+        <p>（此頁面提供第三方登入服務審查所需之資料刪除指示 URL。）</p>
       </footer>
     </main>
   </section>
